@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Eventi - La Casa In Campagna</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
     body {
       font-family: 'Rosemartin', serif;
       background-color: #EDE8D0;
-      background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
+      background-image: url('Foto/background ogni immagine/Sfondo.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -39,23 +39,24 @@
 
     nav {
       padding: 1rem 0;
-      display: flex;
-      justify-content: center;
       width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 80px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
       padding: 0;
-      margin: 0 auto;
+      margin: 0;
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       transition: color 0.3s ease;
     }
 
@@ -65,45 +66,56 @@
 
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-top: 40px;
+      padding: 0 20px;
     }
 
     .contenuto {
-      max-width: 3200px;
+      max-width: 1200px;
       text-align: center;
-      padding: 3rem;
+      padding: 2rem 1rem;
     }
 
     .contenuto p {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       margin-bottom: 40px;
       line-height: 1.6;
     }
 
     .contenuto img {
-      width: 350px;
+      width: 500px;
       max-width: 100%;
       height: auto;
       border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+      }
+
+      .contenuto p {
+        font-size: 1.4rem;
       }
 
       .contenuto {
         padding: 1rem;
       }
 
-      .contenuto p {
-        font-size: 1.5rem;
-      }
-
       .contenuto img {
-        width: 80%;
+        width: 90%;
       }
     }
   </style>
@@ -114,10 +126,10 @@
   <nav>
     <ul>
       <li><a href="ancona.html">HOME</a></li>
-	  <li><a href="Menu.html">MENU</a></li>
+      <li><a href="Menu.html">MENU</a></li>
       <li><a href="Eventi.html">EVENTI</a></li>
       <li><a href="Camere.html">CAMERE</a></li>
-	   <li><a href="Piscina.html">PISCINA</a></li>
+      <li><a href="Piscina.html">PISCINA</a></li>
       <li><a href="Contattaci.html">CONTATTACI</a></li>
     </ul>
   </nav>
@@ -126,17 +138,16 @@
   <h1>EVENTI CASA IN CAMPAGNA</h1>
 
   <div class="contenuto">
-   <p>
-  Vivi con noi momenti unici nella cornice tranquilla della campagna.<br>
-  Organizziamo serate a tema, cene con musica dal vivo, degustazioni,<br>
-  pranzi della domenica e feste su prenotazione.
-</p>
-
+    <p>
+      Vivi con noi momenti unici nella cornice tranquilla della campagna.<br>
+      Organizziamo serate a tema, cene con musica dal vivo, degustazioni,<br>
+      pranzi della domenica e feste su prenotazione.
+    </p>
 
     <img
-      src="Foto/eventi/1_maggio_2022.webp""
+      src="Foto/eventi/1_maggio_2022.webp"
+      loading="lazy"
       alt="Evento 1 maggio"
-	 
     />
   </div>
 
