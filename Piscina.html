@@ -25,14 +25,18 @@
 
     body {
       font-family: 'Rosemartin', serif;
-      background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
+      background-color: #EDE8D0;
+      background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       color: black;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 80px; /* spazio per menu fisso */
+      padding-bottom: 40px;
+      padding-top: 80px; /* spazio menu fisso */
     }
 
     nav {
@@ -41,29 +45,29 @@
       left: 0;
       width: 100%;
       background-color: transparent;
-      z-index: 1000;
       padding: 1rem 0;
-      box-sizing: border-box;
+      margin: 0;
+      z-index: 1000;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
       padding: 0;
-      flex-wrap: nowrap;
+      margin: 0 auto;
+      max-width: 900px;
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
-      font-weight: normal;
       transition: color 0.3s ease;
       font-family: 'Rosemartin', serif;
+      font-weight: normal;
     }
 
     nav ul li a:hover {
@@ -76,16 +80,20 @@
     }
 
     .contenuto {
-      max-width: 800px;
-      margin: 40px auto 60px;
-      padding: 30px 20px;
+      max-width: 1200px;
       text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1.6rem;
+      font-family: 'Rosemartin', serif;
+      margin: 40px auto 60px;
       color: black;
-      text-shadow: none;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .contenuto h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 20px;
     }
 
@@ -94,10 +102,9 @@
       padding-left: 0;
       font-size: 1.4rem;
       line-height: 1.8;
-      max-width: 420px;
+      max-width: 500px;
       margin: 0 auto;
       text-align: left;
-      text-shadow: none;
     }
 
     .contenuto ul li::before {
@@ -129,17 +136,18 @@
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         max-width: 320px;
         margin: 0 auto;
       }
 
       nav ul li a {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
 
       .contenuto {
-        padding: 20px 15px;
+        padding: 1rem;
+        font-size: 1.3rem;
         max-width: 95%;
       }
 
@@ -148,8 +156,8 @@
       }
 
       .contenuto ul {
-        font-size: 1.2rem;
         max-width: 100%;
+        font-size: 1.1rem;
       }
 
       .video-container {
