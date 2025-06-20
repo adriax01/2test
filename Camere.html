@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Camere - La Casa In Campagna</title>
 
-  <!-- Font Rosemartin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rosemartin&display=swap" rel="stylesheet" />
+
   <style>
     @font-face {
       font-family: 'Rosemartin';
@@ -13,13 +16,7 @@
       font-weight: normal;
       font-style: normal;
     }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
 
-  <!-- STILE IDENTICO EVENTI -->
-  <style>
     * {
       margin: 0;
       padding: 0;
@@ -38,6 +35,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 40px;
     }
 
     nav {
@@ -51,9 +49,12 @@
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 40px;
       padding: 0;
       margin: 0;
+      border: none;
+      box-shadow: none;
     }
 
     nav ul li a {
@@ -78,41 +79,60 @@
       max-width: 1200px;
       text-align: center;
       padding: 2rem 1rem;
+      font-size: 1.6rem;
+      font-family: 'Rosemartin', serif;
     }
 
     .contenuto p {
-      font-size: 1.8rem;
       margin-bottom: 40px;
       line-height: 1.6;
     }
 
     .contenuto img {
-      width: 500px;
+      width: 300px;
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
     }
 
-    .listino {
-      margin-top: 3rem;
+    .foto-camere {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
       font-size: 1.6rem;
-      line-height: 1.6;
+      font-family: 'Rosemartin', serif;
+      width: 90%;
+      max-width: 700px;
     }
 
-    .listino h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    th, td {
+      border: 1px solid #999;
+      padding: 12px 20px;
     }
 
-    .listino ul {
-      list-style: none;
-      padding: 0;
+    thead tr {
+      background-color: #ddd;
     }
 
-    .listino ul li {
-      margin-bottom: 10px;
+    tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    p.stagioni {
+      margin-top: 30px;
+      font-size: 1.4rem;
+      font-style: italic;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 768px) {
@@ -130,29 +150,27 @@
         margin-top: 30px;
       }
 
-      .contenuto p {
+      .contenuto {
+        padding: 1rem;
         font-size: 1.4rem;
       }
 
-      .contenuto {
-        padding: 1rem;
+      .foto-camere {
+        flex-direction: column;
+        gap: 20px;
       }
 
       .contenuto img {
         width: 90%;
       }
 
-      .listino {
+      table {
+        width: 100%;
         font-size: 1.3rem;
-      }
-
-      .listino h2 {
-        font-size: 1.6rem;
       }
     }
   </style>
 </head>
-
 <body>
 
   <!-- MENU -->
@@ -160,38 +178,64 @@
     <ul>
       <li><a href="index.html">HOME</a></li>
       <li><a href="Eventi.html">EVENTI</a></li>
-      <li><a href="Camere.html">CAMERE</a></li>
+      <li><a href="Camere.html" style="font-weight: bold; color:#00bcd4;">CAMERE</a></li>
       <li><a href="Piscina.html">PISCINA</a></li>
       <li><a href="Contattaci.html">CONTATTACI</a></li>
     </ul>
   </nav>
 
   <!-- CONTENUTO -->
-  <h1>LE CAMERE DELLA CASA IN CAMPAGNA</h1>
+  <h1>LE CAMERE DI CASA IN CAMPAGNA</h1>
 
   <div class="contenuto">
     <p>
-      Immersa nella quiete della natura, ogni nostra camera è pensata per offrirti un soggiorno rilassante e confortevole.<br>
-      Arredi rustici, atmosfere accoglienti e una vista sul verde delle campagne marchigiane.<br>
-      Prenota e riscopri il piacere della semplicità.
+      Le nostre camere sono accoglienti e curate, perfette per un soggiorno rilassante immersi nella natura.
     </p>
 
-    <!-- FOTO CAMERE -->
-    <img src="Foto/camere/camera1.webp" loading="lazy" alt="Camera 1" />
-    <img src="Foto/camere/camera2.webp" loading="lazy" alt="Camera 2" />
-    <img src="Foto/camere/camera3.webp" loading="lazy" alt="Camera 3" />
-
-    <!-- LISTINO PREZZI -->
-    <div class="listino">
-      <h2>Listino Prezzi</h2>
-      <ul>
-        <li>Camera Matrimoniale: <strong>80€ a notte</strong></li>
-        <li>Camera Doppia con letti singoli: <strong>70€ a notte</strong></li>
-        <li>Camera Tripla: <strong>100€ a notte</strong></li>
-        <li>Colazione inclusa in tutte le tariffe</li>
-        <li>Check-in: dalle 14:00 - Check-out: entro le 11:00</li>
-      </ul>
+    <div class="foto-camere">
+      <img src="Foto/camere/camera1.webp" alt="Camera Matrimoniale" loading="lazy" />
+      <img src="Foto/camere/camera2.webp" alt="Camera Doppia" loading="lazy" />
+      <img src="Foto/camere/camera3.webp" alt="Camera Singola" loading="lazy" />
     </div>
+
+    <h2>LISTINO PREZZI 2025</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipologia Camera</th>
+          <th>Bassa Stagione</th>
+          <th>Media Stagione</th>
+          <th>Alta Stagione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Camera Singola</td>
+          <td>€ 35</td>
+          <td>€ 40</td>
+          <td>€ 50</td>
+        </tr>
+        <tr>
+          <td>Camera Doppia</td>
+          <td>€ 60</td>
+          <td>€ 70</td>
+          <td>€ 80</td>
+        </tr>
+        <tr>
+          <td>Camera Matrimoniale</td>
+          <td>€ 70</td>
+          <td>€ 80</td>
+          <td>€ 100</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="stagioni">
+      * Bassa stagione: Novembre, Gennaio, Febbraio<br>
+      * Media stagione: Marzo, Aprile, Ottobre, Dicembre<br>
+      * Alta stagione: Maggio, Giugno, Luglio, Agosto, Settembre
+    </p>
   </div>
 
 </body>
