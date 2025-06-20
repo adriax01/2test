@@ -92,6 +92,27 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .listino {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    .listino h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .listino ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .listino ul li {
+      margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
@@ -120,13 +141,21 @@
       .contenuto img {
         width: 90%;
       }
+
+      .listino {
+        font-size: 1.3rem;
+      }
+
+      .listino h2 {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- MENU CENTRATO, NESSUNO SFONDO, STESSO DI "EVENTI" -->
+  <!-- MENU -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -147,11 +176,22 @@
       Prenota e riscopri il piacere della semplicità.
     </p>
 
-    <img
-      src="Foto/camere/camera1.webp"
-      loading="lazy"
-      alt="Camera matrimoniale"
-    />
+    <!-- FOTO CAMERE -->
+    <img src="Foto/camere/camera1.webp" loading="lazy" alt="Camera 1" />
+    <img src="Foto/camere/camera2.webp" loading="lazy" alt="Camera 2" />
+    <img src="Foto/camere/camera3.webp" loading="lazy" alt="Camera 3" />
+
+    <!-- LISTINO PREZZI -->
+    <div class="listino">
+      <h2>Listino Prezzi</h2>
+      <ul>
+        <li>Camera Matrimoniale: <strong>80€ a notte</strong></li>
+        <li>Camera Doppia con letti singoli: <strong>70€ a notte</strong></li>
+        <li>Camera Tripla: <strong>100€ a notte</strong></li>
+        <li>Colazione inclusa in tutte le tariffe</li>
+        <li>Check-in: dalle 14:00 - Check-out: entro le 11:00</li>
+      </ul>
+    </div>
   </div>
 
 </body>
