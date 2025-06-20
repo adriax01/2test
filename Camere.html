@@ -29,7 +29,7 @@
     min-height: 100vh;
   }
 
-  /* MENU FISSO */
+/* MENU FISSO */
 nav {
   position: fixed;
   top: 0;
@@ -45,7 +45,6 @@ nav ul {
   list-style: none;
   display: inline-flex;
   gap: 40px;
-  /* Mantieni il centraggio */
   justify-content: center;
 }
 
@@ -63,10 +62,9 @@ nav ul li a:hover {
 
 /* SPACING PER IL CONTENUTO SOTTO IL MENU */
 main {
-  padding-top: 80px; /* spazio per il menu fisso */
-}
+  padding-top: 80px;
+}  /* <-- chiudo qui main */
 
-/* Qui chiudiamo il blocco main e mettiamo fuori le altre regole */
 main h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
@@ -77,6 +75,9 @@ main p {
   margin-bottom: 40px;
   line-height: 1.6;
 }
+
+/* continua con il resto del tuo CSS originale... */
+
   .info-section {
     text-align: left;
     font-size: 1.2rem;
