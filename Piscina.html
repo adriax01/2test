@@ -25,30 +25,26 @@
 
     html, body {
       scroll-behavior: smooth;
-    }
-
-    body {
       font-family: 'Rosemartin', sans-serif;
       background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
       background-size: cover;
       color: black;
       padding-top: 100px;
+      min-height: 100vh;
     }
 
-   nav {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
- 
-  
-  padding: 10px 20px;
- 
-  border-radius: 0 0 10px 10px;
-  max-width: 900px;         /* larghezza massima menu */
-  width: 100%;              /* si adatta al contenitore */
-}
-
+    nav {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      border-radius: 0 0 10px 10px;
+      max-width: 900px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: 1000;
+    }
 
     nav ul {
       list-style: none;
@@ -57,6 +53,7 @@
       justify-content: center;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -75,8 +72,9 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 40px 20px;
-    
       border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     .contenuto h2 {
@@ -89,6 +87,9 @@
       padding: 0;
       font-size: 1.4rem;
       line-height: 1.8;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
     }
 
     .contenuto ul li::before {
@@ -99,23 +100,50 @@
     .video-container {
       display: flex;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
     }
 
-    .video-container video {
-      max-width: 100%;
-      height: auto;
+    .video-container iframe {
+      width: 100%;
+      height: 400px;
       border-radius: 12px;
-   
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      border: none;
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
+      nav ul {
+        gap: 20px;
+        flex-direction: column;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      nav ul li a {
+        font-size: 1.4rem;
+      }
+
+      .contenuto {
+        padding: 30px 15px;
+        max-width: 95%;
+      }
+
       .contenuto h2 {
         font-size: 2rem;
       }
 
       .contenuto ul {
         font-size: 1.2rem;
+        max-width: 100%;
+      }
+
+      .video-container {
+        padding: 20px 10px 40px;
+      }
+
+      .video-container iframe {
+        height: 300px;
       }
     }
   </style>
@@ -126,39 +154,31 @@
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
-	  <li><a href="Menu.html">MENU</a></li>
+      <li><a href="Menu.html">MENU</a></li>
       <li><a href="Eventi.html">EVENTI</a></li>
       <li><a href="Camere.html">CAMERE</a></li>
-	  <li><a href="Piscina.html">PISCINA</a></li>
+      <li><a href="Piscina.html">PISCINA</a></li>
       <li><a href="Contattaci.html">CONTATTACI</a></li>
     </ul>
   </nav>
 
+  <div class="contenuto">
+    <h2>Ingresso piscina</h2>
+    <ul>
+      <li>5€ postazione ombrellone e lettino</li>
+      <li>15€ ingresso dal martedì al giovedì (cuffia obbligatoria)</li>
+      <li>Ingresso gratuito per bambini sotto i 3 anni</li>
+    </ul>
 
-<div style="text-align: center; padding: 40px;">
-  <h2>Ingresso piscina</h2>
-  <ul style="font-size: 1.5rem; list-style: none; padding: 0;">
-    <li>5€ postazione ombrellone e lettino</li>
-    <li>15€ ingresso dal martedì al giovedì (cuffia obbligatoria)</li>
-    <li>Ingresso gratuito per bambini sotto i 3 anni</li>
-  </ul>
-
-
-
-  <div class="video-container" style="margin-top: 30px;">
-    <video controls autoplay muted playsinline style="height: 600px; width: auto; border-radius: 12px;">
-      <source src="Foto/video piscina/IMG_2181.mp4" type="video/mp4" />
-      Il tuo browser non supporta il video.
-    </video>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/H0izhOVS8GM?autoplay=1&mute=1&playsinline=1" 
+        title="Video Piscina" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
-</div>
-
-
-
-
-
-
-
 
 </body>
 </html>
