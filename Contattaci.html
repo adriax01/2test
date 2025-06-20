@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CONTATTACI - La Casa In Campagna</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+
   <style>
     @font-face {
       font-family: 'Rosemartin';
@@ -21,39 +25,37 @@
 
     body {
       font-family: 'Rosemartin', sans-serif;
-      background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
+      background-color: #000000;
+      background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       color: black;
-      padding-top: 90px; /* spazio per menu fisso */
     }
 
     nav {
-      width: 100%;
-      background-color: transparent;
-      padding: 1rem 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
+      padding: 1rem 2rem;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
+    }
+
+    nav ul li {
+      margin: 0 20px 0 0;
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       transition: color 0.3s ease;
-      font-weight: 600;
     }
 
     nav ul li a:hover {
@@ -62,46 +64,29 @@
 
     h1 {
       text-align: center;
+      margin-top: 40px;
       font-size: 3.5rem;
-      margin-bottom: 30px;
     }
 
     p {
       text-align: center;
-      font-size: 2rem;
-      max-width: 900px;
-      margin: 0 auto 30px;
+      margin-top: 20px;
+      font-size: 2.4rem;
+      max-width: 2100px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.8;
       padding: 1rem;
-      color: black;
-    }
-
-    .mappa {
-      max-width: 900px;
-      margin: 0 auto 40px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .social {
-      text-align: center;
-      font-size: 1.4rem;
-      margin-bottom: 40px;
-    }
-
-    .social a {
-      color: black;
-      text-decoration: none;
-    }
-
-    .social a:hover {
-      color: #00bcd4;
     }
 
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
-        gap: 20px;
+        align-items: flex-start;
+      }
+
+      nav ul li {
+        margin: 10px 0;
       }
 
       nav ul li a {
@@ -113,18 +98,14 @@
       }
 
       p {
-        font-size: 1.2rem;
-      }
-
-      .social {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
+        padding: 1rem;
       }
     }
   </style>
 </head>
 
 <body>
-
   <!-- NAV -->
   <nav>
     <ul>
@@ -141,24 +122,21 @@
 
   <!-- CONTENUTO -->
   <p>
-    Indirizzo: Via Sappanico 93, Sappanico (AN)<br>
-    60131 - Ancona, Italia<br>
-    Telefono: 333 84 922 00<br>
-    Email: lacasaincampagna@email.it
+    Contattaci.<br>
+    Informazioni sul contatto.<br>
+    Indirizzo: Via Sappanico 93, Sappanico (AN).<br>
+    Ancona, 60131 - Italia.<br>
+    Telefono: 333 84 922 00.<br>
+    Modulo contatti.<br>
   </p>
 
-  <!-- MAPPA -->
-  <div class="mappa">
+  <!-- Mappa -->
+  <div style="max-width: 900px; margin: 40px auto; border-radius: 12px; overflow: hidden;">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.067027177641!2d13.440953715533215!3d43.57207857911569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d83d4d3b29645%3A0x9f3a7a44e81f7f11!2sAgriturismo%20La%20Casa%20in%20Campagna!5e0!3m2!1sit!2sit!4v1686750000000!5m2!1sit!2sit"
       width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-  </div>
-
-  <!-- SOCIAL -->
-  <div class="social">
-    Seguici su <a href="https://www.instagram.com/tuoprofilo" target="_blank">Instagram</a>
   </div>
 
 </body>
