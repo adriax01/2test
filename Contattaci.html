@@ -24,118 +24,108 @@
       background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 90px; /* spazio per il menu fisso */
       color: black;
+      padding-top: 90px; /* spazio per menu fisso */
     }
 
     nav {
       width: 100%;
       background-color: transparent;
+      padding: 1rem 0;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 1000;
-      padding: 1rem 0;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 40px;
-      margin: 0 auto;
-      padding: 0;
       max-width: 900px;
+      margin: 0 auto;
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
-      font-weight: 600;
       transition: color 0.3s ease;
+      font-weight: 600;
     }
 
     nav ul li a:hover {
       color: #00bcd4;
     }
 
-    .contenuto {
-      max-width: 800px;
+    h1 {
       text-align: center;
-      padding: 30px 20px;
+      font-size: 3.5rem;
+      margin-bottom: 30px;
     }
 
-    .contenuto h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .contenuto p {
-      font-size: 1.6rem;
-      line-height: 1.8;
-    }
-
-    .map-container {
+    p {
+      text-align: center;
+      font-size: 2rem;
       max-width: 900px;
-      margin: 30px auto;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      padding: 1rem;
+      color: black;
+    }
+
+    .mappa {
+      max-width: 900px;
+      margin: 0 auto 40px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
     .social {
       text-align: center;
-      margin: 20px;
+      font-size: 1.4rem;
+      margin-bottom: 40px;
     }
 
     .social a {
-      text-decoration: none;
       color: black;
-      font-size: 1.4rem;
-      border: 2px solid black;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .social a:hover {
-      background-color: #00bcd4;
-      color: white;
-      border-color: #00bcd4;
+      color: #00bcd4;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
         gap: 20px;
-        max-width: 90%;
       }
 
       nav ul li a {
         font-size: 1.3rem;
       }
 
-      .contenuto h1 {
+      h1 {
         font-size: 2.2rem;
       }
 
-      .contenuto p {
+      p {
         font-size: 1.2rem;
       }
 
-      .social a {
-        font-size: 1.2rem;
+      .social {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Menu come Camere -->
+
+  <!-- NAV -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -146,35 +136,30 @@
     </ul>
   </nav>
 
-  <!-- Contenuto principale -->
-  <div class="contenuto">
-    <h1>CONTATTACI</h1>
-    <p>
-      Indirizzo: Via Sappanico 93, Sappanico (AN)<br />
-      Ancona, 60131 - Italia<br />
-      Telefono: 333 84 922 00<br />
-      Per qualsiasi richiesta scriveteci o seguiteci su Instagram!
-    </p>
-  </div>
+  <!-- TITOLO -->
+  <h1>CONTATTACI</h1>
 
-  <!-- Mappa -->
-  <div class="map-container">
+  <!-- CONTENUTO -->
+  <p>
+    Indirizzo: Via Sappanico 93, Sappanico (AN)<br>
+    60131 - Ancona, Italia<br>
+    Telefono: 333 84 922 00<br>
+    Email: lacasaincampagna@email.it
+  </p>
+
+  <!-- MAPPA -->
+  <div class="mappa">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.067027177641!2d13.440953715533215!3d43.57207857911569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d83d4d3b29645%3A0x9f3a7a44e81f7f11!2sAgriturismo%20La%20Casa%20in%20Campagna!5e0!3m2!1sit!2sit!4v1686750000000!5m2!1sit!2sit"
-      width="100%"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
 
-  <!-- Social -->
+  <!-- SOCIAL -->
   <div class="social">
-    <a href="https://www.instagram.com/lacasaincampagna.an" target="_blank">
-      Seguici su Instagram
-    </a>
+    Seguici su <a href="https://www.instagram.com/tuoprofilo" target="_blank">Instagram</a>
   </div>
+
 </body>
 </html>
