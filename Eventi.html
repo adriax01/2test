@@ -37,12 +37,21 @@
       align-items: center;
     }
 
-    nav {
-      padding: 1rem 0;
-      width: 100%;
-      background-color: rgba(237, 232, 208, 0.6); /* semi-trasparente */
-      backdrop-filter: blur(5px); /* effetto sfocatura dietro il nav */
-    }
+  nav {
+  padding: 1rem 0;
+  width: 100%;
+
+  /* Sfondo identico al body */
+  background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* per far stare sopra gli elementi */
+  position: relative;
+  z-index: 10;
+}
+
 
     nav ul {
       list-style: none;
