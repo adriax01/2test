@@ -1,169 +1,166 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Camere - La Casa In Campagna</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Camere - La Casa In Campagna</title>
 
-<style>
-  @font-face {
-    font-family: 'Rosemartin';
-    src: url('Rosemartin.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <style>
+    @font-face {
+      font-family: 'Rosemartin';
+      src: url('Rosemartin.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-  body {
-    font-family: 'Rosemartin', sans-serif;
-    background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
-    background-size: cover;
-    color: black;
-    min-height: 100vh;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* MENU FISSO */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent;
-    padding: 20px 0;
-    z-index: 10000;
-    text-align: center;
-  }
-
-  nav ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 40px;
-    justify-content: center;
-    padding-left: 0;
-    margin: 0 auto;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.4rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    color: #00bcd4;
-  }
-
-  main {
-    padding-top: 80px;
-  }
-
-  main h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  main p {
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  .info-section {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .info-section h2 {
-    margin-top: 30px;
-    font-size: 1.6rem;
-  }
-
-  .info-section ul {
-    margin-left: 20px;
-    list-style: disc;
-  }
-
-  .gallery-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .column {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-
-  .column img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    object-fit: cover;
-  }
-
-  .column img:hover {
-    transform: scale(1.03);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav ul {
+    body {
+      font-family: 'Rosemartin', serif;
+      background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: black;
+      min-height: 100vh;
       display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      gap: 15px;
-      padding-left: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background-color: transparent;
+      padding: 1rem 0;
       margin: 0;
     }
 
-    main {
-      padding-top: 100px;
-      padding-left: 15px;
-      padding-right: 15px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
     }
 
-    main h1 {
-      font-size: 2rem;
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
     }
 
-    main p {
-      font-size: 1.2rem;
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+
+    p {
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 20px auto;
+      line-height: 1.6;
+      max-width: 900px;
     }
 
     .info-section {
-      font-size: 1rem;
+      text-align: left;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 900px;
+      padding: 1rem;
+    }
+
+    .info-section h2 {
+      margin-top: 30px;
+      font-size: 1.6rem;
+    }
+
+    .info-section ul {
+      margin-left: 20px;
+      list-style: disc;
     }
 
     .gallery-container {
-      flex-direction: column;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      justify-content: center;
+      padding: 0 1rem 2rem;
     }
 
     .column {
-      max-width: 100%;
+      flex: 1 1 45%;
+      max-width: 45%;
     }
-  }
-</style>
 
+    .column img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      object-fit: cover;
+    }
+
+    .column img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15px;
+        gap: 15px;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 1.4rem;
+        padding: 0 10px;
+      }
+
+      .info-section {
+        font-size: 1rem;
+      }
+
+      .gallery-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- MENU -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -174,46 +171,45 @@
     </ul>
   </nav>
 
-  <main>
-    <h1>LE NOSTRE CAMERE</h1>
-    <p>
-      Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br>
-      Scopri un soggiorno di relax e autenticità.
-    </p>
+  <!-- CONTENUTO -->
+  <h1>LE NOSTRE CAMERE</h1>
+  <p>
+    Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br>
+    Scopri un soggiorno di relax e autenticità.
+  </p>
 
-    <section class="info-section">
-      <h2>Appartamento</h2>
-      <ul>
-        <li>Sala</li>
-        <li>Cucina</li>
-        <li>2 camere da letto</li>
-        <li>Bagno</li>
-        <li>Aria condizionata</li>
-        <li>140€ bassa stagione</li>
-        <li>160€ media stagione</li>
-        <li>180€ alta stagione</li>
-      </ul>
+  <section class="info-section">
+    <h2>Appartamento</h2>
+    <ul>
+      <li>Sala</li>
+      <li>Cucina</li>
+      <li>2 camere da letto</li>
+      <li>Bagno</li>
+      <li>Aria condizionata</li>
+      <li>140€ bassa stagione</li>
+      <li>160€ media stagione</li>
+      <li>180€ alta stagione</li>
+    </ul>
 
-      <h2>Camera matrimoniale</h2>
-      <ul>
-        <li>Bagno</li>
-        <li>Aria condizionata</li>
-        <li>Accesso gratuito in piscina</li>
-        <li>70€ + prima colazione bassa stagione</li>
-        <li>80€ + prima colazione media stagione</li>
-        <li>90€ + prima colazione alta stagione</li>
-      </ul>
-    </section>
+    <h2>Camera matrimoniale</h2>
+    <ul>
+      <li>Bagno</li>
+      <li>Aria condizionata</li>
+      <li>Accesso gratuito in piscina</li>
+      <li>70€ + prima colazione bassa stagione</li>
+      <li>80€ + prima colazione media stagione</li>
+      <li>90€ + prima colazione alta stagione</li>
+    </ul>
+  </section>
 
-    <div class="gallery-container">
-      <div class="column">
-        <img src="Foto/camera/camera1.webp" alt="Camera 1">
-      </div>
-      <div class="column">
-        <img src="Foto/camera/camera2.webp" alt="Camera 2">
-      </div>
+  <div class="gallery-container">
+    <div class="column">
+      <img src="Foto/camera/camera1.webp" alt="Camera 1">
     </div>
-  </main>
+    <div class="column">
+      <img src="Foto/camera/camera2.webp" alt="Camera 2">
+    </div>
+  </div>
 
 </body>
 </html>
