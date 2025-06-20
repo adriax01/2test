@@ -30,16 +30,16 @@
   }
 
   /* MENU FISSO */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent;
-  padding: 20px 0;
-  z-index: 10000;
-  text-align: center;
-}
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+    z-index: 10000;
+    text-align: center;
+  }
 
   nav ul {
     list-style: none;
@@ -59,10 +59,12 @@ nav {
     color: #00bcd4;
   }
 
-  /* SPACING PER IL CONTENUTO SOTTO IL MENU */
- main {
-  padding-top: 80px; /* deve essere almeno l'altezza del nav per non sovrapporsi */
-
+  /* Spazio sotto il menu fisso */
+  main {
+    padding-top: 80px; /* altezza nav (20px padding top + nav height approssimativa) */
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
   main h1 {
     font-size: 2.8rem;
