@@ -28,19 +28,18 @@
     font-family: 'Rosemartin', sans-serif;
     background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
     background-size: cover;
-    color: #000;
+    color: black;
     min-height: 100vh;
-    padding-top: 70px;
   }
 
   nav {
     background-color: transparent;
     padding: 1rem 2rem;
     width: 100%;
-    position: fixed;
+    position: fixed; /* Fisso in alto */
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   nav ul {
@@ -57,7 +56,7 @@
 
   nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: black;
     font-size: 1.4rem;
     transition: color 0.3s ease;
   }
@@ -68,9 +67,10 @@
 
   .section {
     text-align: center;
-    padding: 40px 20px 60px;
+    padding: 100px 20px 60px; /* 100px per far spazio al menu fisso */
     max-width: 1000px;
     margin: 0 auto;
+    background: transparent !important; /* trasparente */
   }
 
   .section h1 {
@@ -93,14 +93,16 @@
     font-size: 1.2rem;
     line-height: 1.6;
     padding: 20px;
-    border-radius: 10px;
-    /* background-color: rgba(255, 255, 255, 0.85);  <-- RIMOSSO */
+    background: transparent !important; /* niente sfondo */
+    box-shadow: none !important;
+    border: none !important;
+    color: black;
   }
 
   .info-section h2 {
     margin-top: 30px;
     font-size: 1.6rem;
-    color: #333;
+    color: black;
   }
 
   .info-section ul {
@@ -139,7 +141,6 @@
     transform: scale(1.03);
   }
 
-  /* Responsive per telefoni */
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;
@@ -157,6 +158,10 @@
       font-size: 1.3rem;
     }
 
+    .section {
+      padding: 120px 10px 40px; /* più spazio sopra per menu fisso */
+    }
+
     .section h1 {
       font-size: 2rem;
     }
@@ -171,6 +176,10 @@
       padding: 15px 10px;
       margin: 20px 10px;
       max-width: 90%;
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      color: black;
     }
 
     .info-section h2 {
@@ -200,7 +209,7 @@
 </head>
 <body>
 
-  <!-- Menu -->
+  <!-- Menu fisso -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -248,12 +257,10 @@
 
   <!-- Galleria -->
   <div class="gallery-container">
-    <!-- Colonna Sinistra -->
     <div class="column">
       <img src="Foto/camera/camera1.webp" alt="Camera 1" />
     </div>
 
-    <!-- Colonna Destra -->
     <div class="column">
       <img src="Foto/camera/camera2.webp" alt="Camera 2" />
     </div>
