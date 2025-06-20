@@ -25,7 +25,7 @@
 
     body {
       font-family: 'Rosemartin', sans-serif;
-      background-color: #000000;
+      background-color: #ffffff;
       background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
       background-size: cover;
       background-repeat: no-repeat;
@@ -33,12 +33,13 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      color: white;
       padding-bottom: 40px;
+      color: black;
     }
 
     nav {
       padding: 1rem 2rem;
+      background-color: transparent;
     }
 
     nav ul {
@@ -54,31 +55,37 @@
 
     nav ul li a {
       text-decoration: none;
-      color: white; /* menu testo bianco per contrasto */
+      color: black; /* testo nero */
       font-size: 1.6rem;
       transition: color 0.3s ease;
       font-family: 'Rosemartin', serif;
+      font-weight: 600;
     }
 
     nav ul li a:hover {
       color: #00bcd4;
     }
 
-    h1 {
+    .contenuto {
+      background-color: rgba(255,255,255,0.85); /* sfondo chiaro semi-trasparente */
+      max-width: 700px;
+      margin: 40px auto 40px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
-      margin: 40px 0 20px;
+      color: black;
+    }
+
+    h1 {
+      margin-bottom: 20px;
       font-size: 3.5rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      font-weight: 700;
     }
 
     p {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 40px;
       font-size: 1.8rem;
       line-height: 1.6;
-      padding: 0 1rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     /* Contenitore mappa */
@@ -87,7 +94,7 @@
       margin: 0 auto 40px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .map-container iframe {
@@ -95,6 +102,7 @@
       height: 450px;
       border: 0;
       display: block;
+      border-radius: 12px;
     }
 
     /* Footer social */
@@ -103,7 +111,7 @@
       margin-top: auto;
       font-family: 'Rosemartin', serif;
       font-size: 1.6rem;
-      color: white;
+      color: black;
       padding: 20px 10px;
     }
 
@@ -140,15 +148,17 @@
         font-size: 1.3rem;
       }
 
+      .contenuto {
+        margin: 30px 15px 30px;
+        padding: 20px 15px;
+      }
+
       h1 {
         font-size: 2.5rem;
-        margin: 30px 0 15px;
       }
 
       p {
         font-size: 1.3rem;
-        max-width: 95%;
-        margin-bottom: 30px;
       }
 
       .map-container iframe {
@@ -180,18 +190,19 @@
     </ul>
   </nav>
 
-  <!-- TITOLO -->
-  <h1>CONTATTACI</h1>
+  <!-- CONTENUTO PRINCIPALE -->
+  <div class="contenuto">
+    <h1>CONTATTACI</h1>
 
-  <!-- CONTENUTO -->
-  <p>
-    Contattaci.<br>
-    Informazioni sul contatto.<br>
-    Indirizzo: Via Sappanico 93, Sappanico (AN).<br>
-    Ancona, 60131 - Italia.<br>
-    Telefono: 333 84 922 00.<br>
-    Modulo contatti.<br>
-  </p>
+    <p>
+      Contattaci.<br />
+      Informazioni sul contatto.<br />
+      Indirizzo: Via Sappanico 93, Sappanico (AN).<br />
+      Ancona, 60131 - Italia.<br />
+      Telefono: 333 84 922 00.<br />
+      Modulo contatti.<br />
+    </p>
+  </div>
 
   <!-- MAPPA -->
   <div class="map-container">
@@ -199,8 +210,8 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.067027177641!2d13.440953715533215!3d43.57207857911569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d83d4d3b29645%3A0x9f3a7a44e81f7f11!2sAgriturismo%20La%20Casa%20in%20Campagna!5e0!3m2!1sit!2sit!4v1686750000000!5m2!1sit!2sit"
       allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 
   <!-- FOOTER SOCIAL -->
