@@ -35,19 +35,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 40px;
-      padding-top: 100px; /* Aumentato per spazio menu fisso */
+      /* niente padding-top, il menu non è fisso */
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
-      background-color: transparent;
+      background-color: transparent; /* trasparente senza sfondo */
       padding: 1rem 0;
       margin: 0;
-      z-index: 9999; /* Molto alto per stare sopra */
     }
 
     nav ul {
@@ -59,6 +54,8 @@
       padding: 0;
       margin: 0 auto;
       max-width: 900px;
+      border: none;
+      box-shadow: none;
     }
 
     nav ul li a {
@@ -80,16 +77,13 @@
     }
 
     .contenuto {
-      max-width: 1200px;
+      max-width: 900px;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 4rem; /* spazio sotto più grande */
       font-size: 1.6rem;
       font-family: 'Rosemartin', serif;
-      margin: 40px auto 60px;
       color: black;
-      background-color: rgba(255,255,255,0.85);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      /* niente sfondo bianco */
     }
 
     .contenuto h2 {
@@ -103,7 +97,7 @@
       font-size: 1.4rem;
       line-height: 1.8;
       max-width: 500px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
       text-align: left;
     }
 
@@ -113,7 +107,6 @@
     }
 
     .video-container {
-      margin-top: 40px;
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
@@ -142,7 +135,7 @@
       }
 
       nav ul li a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       .contenuto {
