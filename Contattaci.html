@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CONTATTACI - La Casa In Campagna</title>
 
-  <!-- Font Rosemartin -->
   <style>
     @font-face {
       font-family: 'Rosemartin';
@@ -13,9 +12,7 @@
       font-weight: normal;
       font-style: normal;
     }
-  </style>
 
-  <style>
     * {
       margin: 0;
       padding: 0;
@@ -29,17 +26,18 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      padding-top: 90px; /* spazio per il menu fisso */
       color: black;
-      padding-top: 90px;
     }
 
     nav {
       width: 100%;
+      background-color: transparent;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 1000;
-      background-color: transparent;
       padding: 1rem 0;
     }
 
@@ -47,10 +45,9 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 40px;
-      padding: 0;
       margin: 0 auto;
+      padding: 0;
       max-width: 900px;
     }
 
@@ -58,37 +55,33 @@
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
-      transition: color 0.3s ease;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
       color: #00bcd4;
     }
 
-    h1 {
+    .contenuto {
+      max-width: 800px;
       text-align: center;
+      padding: 30px 20px;
+    }
+
+    .contenuto h1 {
       font-size: 3rem;
       margin-bottom: 20px;
     }
 
-    p {
-      text-align: center;
+    .contenuto p {
       font-size: 1.6rem;
       line-height: 1.8;
-      padding: 0 1rem;
-    }
-
-    .contenuto {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      padding: 30px 20px;
-      background-color: transparent;
     }
 
     .map-container {
       max-width: 900px;
-      margin: 20px auto 40px;
+      margin: 30px auto;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -96,15 +89,15 @@
 
     .social {
       text-align: center;
-      margin-bottom: 40px;
+      margin: 20px;
     }
 
     .social a {
+      text-decoration: none;
       color: black;
       font-size: 1.4rem;
-      text-decoration: none;
       border: 2px solid black;
-      padding: 0.5rem 1rem;
+      padding: 8px 16px;
       border-radius: 8px;
       transition: all 0.3s ease;
     }
@@ -119,18 +112,18 @@
       nav ul {
         flex-direction: column;
         gap: 20px;
-        max-width: 100%;
+        max-width: 90%;
       }
 
       nav ul li a {
         font-size: 1.3rem;
       }
 
-      h1 {
+      .contenuto h1 {
         font-size: 2.2rem;
       }
 
-      p {
+      .contenuto p {
         font-size: 1.2rem;
       }
 
@@ -142,7 +135,7 @@
 </head>
 
 <body>
-  <!-- NAV -->
+  <!-- Menu come Camere -->
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -153,7 +146,7 @@
     </ul>
   </nav>
 
-  <!-- CONTENUTO -->
+  <!-- Contenuto principale -->
   <div class="contenuto">
     <h1>CONTATTACI</h1>
     <p>
@@ -164,7 +157,7 @@
     </p>
   </div>
 
-  <!-- MAPPA -->
+  <!-- Mappa -->
   <div class="map-container">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.067027177641!2d13.440953715533215!3d43.57207857911569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d83d4d3b29645%3A0x9f3a7a44e81f7f11!2sAgriturismo%20La%20Casa%20in%20Campagna!5e0!3m2!1sit!2sit!4v1686750000000!5m2!1sit!2sit"
@@ -177,9 +170,11 @@
     </iframe>
   </div>
 
-  <!-- SOCIAL -->
+  <!-- Social -->
   <div class="social">
-    <a href="https://www.instagram.com/lacasaincampagna.an" target="_blank">Seguici su Instagram</a>
+    <a href="https://www.instagram.com/lacasaincampagna.an" target="_blank">
+      Seguici su Instagram
+    </a>
   </div>
 </body>
 </html>
