@@ -30,16 +30,18 @@
       background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
       background-size: cover;
       color: black;
+      padding-top: 90px; /* spazio per menu fisso */
     }
 
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
       padding: 1rem 0;
       background-color: transparent;
       z-index: 1000;
+      display: flex;
+      justify-content: center;
     }
 
     nav ul {
@@ -66,7 +68,7 @@
 
     .contenuto {
       max-width: 800px;
-      margin: 120px auto 60px;
+      margin: 40px auto 60px;
       padding: 30px 20px;
       text-align: center;
       color: black;
@@ -97,10 +99,13 @@
     .video-container {
       margin-top: 40px;
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
@@ -112,11 +117,10 @@
       border: none;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       nav ul {
-        gap: 20px;
         flex-direction: column;
+        gap: 20px;
         max-width: 320px;
         margin: 0 auto;
       }
@@ -141,6 +145,7 @@
 
       .video-container {
         max-width: 100%;
+        padding-bottom: 56.25%;
       }
     }
   </style>
