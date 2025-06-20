@@ -29,34 +29,35 @@
     background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
     background-size: cover;
     color: #000;
+    min-height: 100vh;
   }
 
-nav {
-  background-color: transparent;
-  padding: 1rem 2rem;
- 
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
+  nav {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
 
   nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
   }
 
   nav ul li {
-    margin: 0 40px;
+    margin: 0 10px;
   }
 
   nav ul li a {
     text-decoration: none;
     color: #000;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     transition: color 0.3s ease;
   }
 
@@ -66,21 +67,21 @@ nav {
 
   .section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px 60px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .section h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
   }
 
   .section p {
-    font-size: 2.4rem;
-    max-width: 3200px;
+    font-size: 1.6rem;
+    max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
-    text-align: center;
-    padding: 0 20px;
+    line-height: 1.6;
   }
 
   .info-section {
@@ -88,15 +89,16 @@ nav {
     text-align: left;
     max-width: 800px;
     margin-inline: auto;
-    font-size: 1.4rem;
-    line-height: 2;
+    font-size: 1.2rem;
+    line-height: 1.6;
     padding: 20px;
     border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
   }
 
   .info-section h2 {
     margin-top: 30px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #333;
   }
 
@@ -109,15 +111,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 40px;
-    padding: 100px 20px;
+    gap: 20px;
+    padding: 40px 20px 80px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 60px;
   }
 
   .column {
+    flex: 1 1 45%;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 500px;
+    gap: 20px;
   }
 
   .column img {
@@ -132,10 +138,22 @@ nav {
     transform: scale(1.03);
   }
 
+  /* Responsive per telefoni */
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;
       gap: 1rem;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      font-size: 1.3rem;
     }
 
     .section h1 {
@@ -143,21 +161,38 @@ nav {
     }
 
     .section p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      padding: 0 10px;
+    }
+
+    .info-section {
+      font-size: 1rem;
+      padding: 15px 10px;
+      margin: 20px 10px;
+      max-width: 90%;
+    }
+
+    .info-section h2 {
+      font-size: 1.3rem;
     }
 
     .gallery-container {
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      padding: 20px 10px 40px;
+      max-width: 100%;
+      margin-bottom: 40px;
     }
 
     .column {
       max-width: 90%;
+      flex: none;
     }
 
-    .info-section {
-      font-size: 1rem;
+    .column img {
+      width: 100%;
+      height: auto;
     }
   }
   </style>
@@ -168,10 +203,10 @@ nav {
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
-	  <li><a href="Menu.html">MENU</a></li>
+      <li><a href="Menu.html">MENU</a></li>
       <li><a href="Eventi.html">EVENTI</a></li>
       <li><a href="Camere.html">CAMERE</a></li>
-	   <li><a href="Piscina.html">PISCINA</a></li>
+      <li><a href="Piscina.html">PISCINA</a></li>
       <li><a href="Contattaci.html">CONTATTACI</a></li>
     </ul>
   </nav>
@@ -180,7 +215,7 @@ nav {
   <div class="section">
     <h1>LE NOSTRE CAMERE</h1>
     <p>
-      Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br>
+      Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br />
       Scopri un soggiorno di relax e autenticità.
     </p>
 
@@ -207,19 +242,19 @@ nav {
         <li>80€ + prima colazione media stagione</li>
         <li>90€ + prima colazione alta stagione</li>
       </ul>
-
-
+    </div>
+  </div>
 
   <!-- Galleria -->
   <div class="gallery-container">
     <!-- Colonna Sinistra -->
     <div class="column">
-      <img src="Foto/camera/camera1.webp" alt="Camera 1">
+      <img src="Foto/camera/camera1.webp" alt="Camera 1" />
     </div>
 
     <!-- Colonna Destra -->
     <div class="column">
-      <img src="Foto/camera/camera2.webp" alt="Camera 2">
+      <img src="Foto/camera/camera2.webp" alt="Camera 2" />
     </div>
   </div>
 
