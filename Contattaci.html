@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CONTATTACI - La Casa In Campagna</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
-
+  <!-- Font Rosemartin -->
   <style>
     @font-face {
       font-family: 'Rosemartin';
@@ -16,7 +13,9 @@
       font-weight: normal;
       font-style: normal;
     }
+  </style>
 
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -25,21 +24,23 @@
 
     body {
       font-family: 'Rosemartin', sans-serif;
-      background-color: #ffffff;
-      background-image: url('Foto/background%20ogni%20immagine/Sfondo.png');
+      background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding-bottom: 40px;
       color: black;
+      padding-top: 90px;
     }
 
     nav {
-      padding: 1rem 2rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
       background-color: transparent;
+      padding: 1rem 0;
     }
 
     nav ul {
@@ -47,18 +48,17 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-    }
-
-    nav ul li {
-      margin: 0 40px;
+      gap: 40px;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 900px;
     }
 
     nav ul li a {
       text-decoration: none;
-      color: black; /* testo nero */
-      font-size: 1.6rem;
+      color: black;
+      font-size: 1.5rem;
       transition: color 0.3s ease;
-      font-family: 'Rosemartin', serif;
       font-weight: 600;
     }
 
@@ -66,113 +66,76 @@
       color: #00bcd4;
     }
 
-    .contenuto {
-      background-color: rgba(255,255,255,0.85); /* sfondo chiaro semi-trasparente */
-      max-width: 700px;
-      margin: 40px auto 40px;
-      padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
-      color: black;
-    }
-
     h1 {
+      text-align: center;
+      font-size: 3rem;
       margin-bottom: 20px;
-      font-size: 3.5rem;
-      font-weight: 700;
     }
 
     p {
-      font-size: 1.8rem;
-      line-height: 1.6;
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      padding: 0 1rem;
     }
 
-    /* Contenitore mappa */
+    .contenuto {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 30px 20px;
+      background-color: transparent;
+    }
+
     .map-container {
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 20px auto 40px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
-    .map-container iframe {
-      width: 100%;
-      height: 450px;
-      border: 0;
-      display: block;
-      border-radius: 12px;
-    }
-
-    /* Footer social */
-    footer {
+    .social {
       text-align: center;
-      margin-top: auto;
-      font-family: 'Rosemartin', serif;
-      font-size: 1.6rem;
+      margin-bottom: 40px;
+    }
+
+    .social a {
       color: black;
-      padding: 20px 10px;
-    }
-
-    footer a {
-      color: #00bcd4;
+      font-size: 1.4rem;
       text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      border: 2px solid black;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
     }
 
-    footer a:hover {
-      color: #008ba3;
+    .social a:hover {
+      background-color: #00bcd4;
+      color: white;
+      border-color: #00bcd4;
     }
 
-    footer svg {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin: 10px 0;
+        gap: 20px;
+        max-width: 100%;
       }
 
       nav ul li a {
         font-size: 1.3rem;
       }
 
-      .contenuto {
-        margin: 30px 15px 30px;
-        padding: 20px 15px;
-      }
-
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
 
-      .map-container iframe {
-        height: 300px;
-      }
-
-      footer {
-        font-size: 1.3rem;
-        padding: 15px 5px;
-      }
-
-      footer svg {
-        width: 20px;
-        height: 20px;
+      .social a {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -190,17 +153,14 @@
     </ul>
   </nav>
 
-  <!-- CONTENUTO PRINCIPALE -->
+  <!-- CONTENUTO -->
   <div class="contenuto">
     <h1>CONTATTACI</h1>
-
     <p>
-      Contattaci.<br />
-      Informazioni sul contatto.<br />
-      Indirizzo: Via Sappanico 93, Sappanico (AN).<br />
-      Ancona, 60131 - Italia.<br />
-      Telefono: 333 84 922 00.<br />
-      Modulo contatti.<br />
+      Indirizzo: Via Sappanico 93, Sappanico (AN)<br />
+      Ancona, 60131 - Italia<br />
+      Telefono: 333 84 922 00<br />
+      Per qualsiasi richiesta scriveteci o seguiteci su Instagram!
     </p>
   </div>
 
@@ -208,21 +168,18 @@
   <div class="map-container">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.067027177641!2d13.440953715533215!3d43.57207857911569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d83d4d3b29645%3A0x9f3a7a44e81f7f11!2sAgriturismo%20La%20Casa%20in%20Campagna!5e0!3m2!1sit!2sit!4v1686750000000!5m2!1sit!2sit"
+      width="100%"
+      height="450"
+      style="border:0;"
       allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 
-  <!-- FOOTER SOCIAL -->
-  <footer>
-    <a href="https://www.instagram.com/la_casa_in_campagna/" target="_blank" rel="noopener noreferrer" aria-label="Instagram La Casa In Campagna">
-      <!-- Icona Instagram SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm-4.25 1a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5z"/>
-      </svg>
-      Seguici su Instagram
-    </a>
-  </footer>
+  <!-- SOCIAL -->
+  <div class="social">
+    <a href="https://www.instagram.com/lacasaincampagna.an" target="_blank">Seguici su Instagram</a>
+  </div>
 </body>
 </html>
