@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Camere - La Casa In Campagna</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
-
   <style>
     @font-face {
       font-family: 'Rosemartin';
@@ -24,7 +20,7 @@
     }
 
     body {
-      font-family: 'Rosemartin', serif;
+      font-family: 'Rosemartin', sans-serif;
       background: url('Foto/background%20ogni%20immagine/Sfondo.png') no-repeat center center fixed;
       background-size: cover;
       color: black;
@@ -39,6 +35,10 @@
       background-color: transparent;
       padding: 1rem 0;
       margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
     }
 
     nav ul {
@@ -62,27 +62,35 @@
       color: #00bcd4;
     }
 
-    h1 {
+    main {
+      padding-top: 100px;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
       text-align: center;
-      font-size: 2.8rem;
-      margin-top: 40px;
-      padding: 0 20px;
     }
 
-    p {
-      font-size: 1.8rem;
-      text-align: center;
-      margin: 20px auto;
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 1.6rem;
+      margin-bottom: 40px;
       line-height: 1.6;
-      max-width: 900px;
     }
 
     .info-section {
-      text-align: left;
       font-size: 1.2rem;
       line-height: 1.6;
-      max-width: 900px;
-      padding: 1rem;
+      text-align: left;
+      width: 100%;
+      max-width: 700px;
     }
 
     .info-section h2 {
@@ -101,18 +109,17 @@
       flex-wrap: wrap;
       margin-top: 40px;
       justify-content: center;
-      padding: 0 1rem 2rem;
     }
 
     .column {
       flex: 1 1 45%;
-      max-width: 45%;
+      max-width: 500px;
     }
 
     .column img {
       width: 100%;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
       object-fit: cover;
     }
@@ -124,8 +131,6 @@
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        align-items: flex-start;
-        padding-left: 15px;
         gap: 15px;
       }
 
@@ -135,12 +140,10 @@
 
       h1 {
         font-size: 2rem;
-        margin-top: 30px;
       }
 
-      p {
+      main p {
         font-size: 1.4rem;
-        padding: 0 10px;
       }
 
       .info-section {
@@ -153,14 +156,13 @@
       }
 
       .column {
-        max-width: 100%;
+        max-width: 90%;
       }
     }
   </style>
 </head>
-<body>
 
-  <!-- MENU -->
+<body>
   <nav>
     <ul>
       <li><a href="index.html">HOME</a></li>
@@ -171,45 +173,45 @@
     </ul>
   </nav>
 
-  <!-- CONTENUTO -->
-  <h1>LE NOSTRE CAMERE</h1>
-  <p>
-    Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br>
-    Scopri un soggiorno di relax e autenticità.
-  </p>
+  <main>
+    <h1>LE NOSTRE CAMERE</h1>
+    <p>
+      Immersi nella natura, i nostri alloggi uniscono il fascino rustico con il comfort moderno.<br>
+      Scopri un soggiorno di relax e autenticità.
+    </p>
 
-  <section class="info-section">
-    <h2>Appartamento</h2>
-    <ul>
-      <li>Sala</li>
-      <li>Cucina</li>
-      <li>2 camere da letto</li>
-      <li>Bagno</li>
-      <li>Aria condizionata</li>
-      <li>140€ bassa stagione</li>
-      <li>160€ media stagione</li>
-      <li>180€ alta stagione</li>
-    </ul>
+    <section class="info-section">
+      <h2>Appartamento</h2>
+      <ul>
+        <li>Sala</li>
+        <li>Cucina</li>
+        <li>2 camere da letto</li>
+        <li>Bagno</li>
+        <li>Aria condizionata</li>
+        <li>140€ bassa stagione</li>
+        <li>160€ media stagione</li>
+        <li>180€ alta stagione</li>
+      </ul>
 
-    <h2>Camera matrimoniale</h2>
-    <ul>
-      <li>Bagno</li>
-      <li>Aria condizionata</li>
-      <li>Accesso gratuito in piscina</li>
-      <li>70€ + prima colazione bassa stagione</li>
-      <li>80€ + prima colazione media stagione</li>
-      <li>90€ + prima colazione alta stagione</li>
-    </ul>
-  </section>
+      <h2>Camera matrimoniale</h2>
+      <ul>
+        <li>Bagno</li>
+        <li>Aria condizionata</li>
+        <li>Accesso gratuito in piscina</li>
+        <li>70€ + prima colazione bassa stagione</li>
+        <li>80€ + prima colazione media stagione</li>
+        <li>90€ + prima colazione alta stagione</li>
+      </ul>
+    </section>
 
-  <div class="gallery-container">
-    <div class="column">
-      <img src="Foto/camera/camera1.webp" alt="Camera 1">
+    <div class="gallery-container">
+      <div class="column">
+        <img src="Foto/camera/camera1.webp" alt="Camera 1">
+      </div>
+      <div class="column">
+        <img src="Foto/camera/camera2.webp" alt="Camera 2">
+      </div>
     </div>
-    <div class="column">
-      <img src="Foto/camera/camera2.webp" alt="Camera 2">
-    </div>
-  </div>
-
+  </main>
 </body>
 </html>
