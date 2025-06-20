@@ -32,37 +32,38 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 90px; /* spazio per menu fisso */
+      padding-top: 80px; /* spazio per menu fisso */
     }
 
     nav {
-      width: 100%;
-      background-color: transparent;
-      padding: 1rem 0;
-      margin: 0;
       position: fixed;
       top: 0;
       left: 0;
+      width: 100%;
+      background-color: transparent;
       z-index: 1000;
+      padding: 1rem 0;
+      box-sizing: border-box;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      flex-wrap: nowrap;
       gap: 40px;
-      padding: 0;
-      margin: 0 auto;
       max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      flex-wrap: nowrap;
     }
 
     nav ul li a {
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
-      transition: color 0.3s ease;
       font-weight: normal;
+      transition: color 0.3s ease;
+      font-family: 'Rosemartin', serif;
     }
 
     nav ul li a:hover {
